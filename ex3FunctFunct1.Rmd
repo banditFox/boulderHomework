@@ -1,0 +1,51 @@
+---
+title: "namingAFunctionExercise"
+author: "Robert Mullins"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## R Markdown
+### Excercise 3:
+read the source code for each of the following three functions, puzzle out what they do, and then brainstorm better names.
+
+**I Suck At Coding**  
+f1 <- function(string, prefix) {substr(string, 1, nchar(prefix)) == prefix}  
+  
+After multiple attempts and trying to figure this out, I understood the general idea, but I googled the actual function and eventually found,  
+\begin{center}
+
+[**CLICK FOR SOLUTION**](https://jrnold.github.io/r4ds-exercise-solutions/functions.html)
+
+\end{center}
+  
+  You have to scroll down a bit, but it's there.  Below is an example of my trial-and-error approach.
+  
+
+  
+  \begin{figure}[b]
+    \includegraphics{images/function2.jpg}
+    \caption{Manipulating Latex Float}
+  \end{figure}
+  
+  
+## **EXPLANATION**
+  
+So Basically, this creates a function, with the variables 'string', and 'prefix'.  These arn't real strings, just variables.  We could have just as easily named them 'x' and 'y'.
+  
+The second half of the function pulls a substring from the variables and takes the first place of the variable.  That's what the '1' is for.  If you're new to coding you might want to look up nchar and read up on it.  Also, you can type **?nchar** in the console of RStudio, and get a basic idea of it.
+  
+#### **To Make it Work**
+You will need to perform a little magic and use the designator **c** to concatenate your entrys.  
+  
+  Example:  f1(c("someStringHere", "someStringHere", "someStringHere"),"aStringYouWantToEvaluate")  
+  
+  The last string will take the first place holder (hence the '1') and evaluate whether the other strings you have put into place has the same first place holder.  If it does, it will return a TRUE or FALSE response.  Play with the place holder **1**, and see what you can do with it.
+  
+***  
+  **EXTRA**  Incidentally, you have to knit this to word if you are calling an image from a web link.  PDF doesn't like the image links.  
+  Frustratingly, when knitting to a Word document, Word places the image exactly where you want it, in your R markdown.  However....to knit to a pdf, Latex kicks in and floats the image to the next page regardless of what you want.  
+  Above is some code in my attempt to override Latex, however I'm not having much luck and getting annoyed, so I'm moving on to the next function excercise.
