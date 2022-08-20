@@ -15,16 +15,15 @@ read the source code for each of the following three functions, puzzle out what 
 **I Suck At Coding**  
 f1 <- function(string, prefix) {substr(string, 1, nchar(prefix)) == prefix}  
   
-After multiple attempts and trying to figure this out, I understood the general idea, but I googled the actual function and eventually found,  
+After multiple attempts and trying to figure this out, I understood the general idea, but I googled the actual function and eventually found,
+
+\newcommand{\soln}{https://jrnold.github.io/r4ds-exercise-solutions/functions.html}
 \begin{center}
 
-[**CLICK FOR SOLUTION**](https://jrnold.github.io/r4ds-exercise-solutions/functions.html)
-
+\href{\soln}{SOLUTION}
 \end{center}
   
   You have to scroll down a bit, but it's there.  Below is an example of my trial-and-error approach.
-  
-
   
   \begin{figure}[b]
     \includegraphics{images/function2.jpg}
@@ -46,6 +45,5 @@ You will need to perform a little magic and use the designator **c** to concaten
   The last string will take the first place holder (hence the '1') and evaluate whether the other strings you have put into place has the same first place holder.  If it does, it will return a TRUE or FALSE response.  Play with the place holder **1**, and see what you can do with it.
   
 ***  
-  **EXTRA**  Incidentally, you have to knit this to word if you are calling an image from a web link.  PDF doesn't like the image links.  
-  Frustratingly, when knitting to a Word document, Word places the image exactly where you want it, in your R markdown.  However....to knit to a pdf, Latex kicks in and floats the image to the next page regardless of what you want.  
+  **EXTRA** Frustratingly, when knitting to a Word document, Word places the image exactly where you want it, in your R markdown.  However....to knit to a pdf, Latex kicks in and floats the image to the next page regardless of what you want.  
   Above is some code in my attempt to override Latex, however I'm not having much luck and getting annoyed, so I'm moving on to the next function excercise.
